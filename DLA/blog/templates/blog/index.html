@@ -3,88 +3,154 @@
 {% block title %} Doctors Leadership Index {% endblock %}
 {% block body %}
 <!-- TODO: complete the landing Page -->
-<div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active ">
-        <div class="justify-content-center">
-          <img class="w-100" src="{% static 'blog/doctorsLA2.jpg'%}">
-        </div>
-        
-        <div class="container">
-          <div class="carousel-caption position-absolute top-50 start-50 translate-middle text-center">
-            <h1>Example headline.</h1>
-            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item h-25">
-        <div class="justify-content-center"> 
-          <img class="w-100" src="{% static 'blog/doctorsLA1.jpg'%}">
-        </div> 
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item h-25">
-        <div class="justify-content-center">
-          <img class="w-100" src="{% static 'blog/doctorsLA1.jpg'%}">  
-        </div> 
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active max-height-carousel ">
+      <img src="{% static 'blog/doctorsLA4.png' %}" class="d-block w-100 h-50"
+        alt="members of doctors leadership academy">
+      <div class="container">
+        <div class="carousel-caption center-caption">
+          <h1>Doctor's Leadership Academy</h1>
+          <p class="opacity-100 fw-medium">Helping Young Doctors Navigate their Careers and Helping Society Understand health.</p>
+          <p><a class="btn btn-lg btn-primary official-color" target="_blank" href="https://lnkd.in/gmTNPkXB">Join Us</a></p>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="carousel-item max-height-carousel">
+      <img src="{% static 'blog/doctorsLA3.png' %}" class="d-block w-100 h-50"
+        alt="members of doctors leadership academy">
+      <div class="container">
+        <div class="carousel-caption center-caption">
+          <h1>Mentorhsip At It's Best</h1>
+          <p class="opacity-100 fw-medium">Have access to a great array of Mentors to help you grow in your career</p>
+          <p><a class="btn btn-lg btn-primary official-color" href="#">Become An Ambassador</a></p>
+        </div>
+      </div>
+    </div>
   </div>
-  <section id="mentorship">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 text-center"><h1>Mentorship</h1></div>
-        <div class="col-md-6 my-auto text-center">
-          <h3>Get Expert Advice</h3>
-          <p>Get expert advice of others who have made it in the field of medicine.
-            Enjoy career enlightment as you embark on your medical journery.
-            Network with a team of like minded peers.
-            have access to mentorship sessions that help you progress in your medical journey!
-          </p>
-        </div>
-        <div class="col-md-6"><img class="w-100" src="{%static 'blog/mentorship-photo.jpg'%}"></div>
-        <div class="container my-5 text-center"><div class="row gx-2">
-          <div class="col-md-4 my-5"><div class="card"><div class="card-body "><h2>Career Development</h2></div></div></div>
-          <div class="col-md-4 my-5"><div class="card"><div class="card-body"><h2>Student Ambassador Program</h2></div></div></div>
-          <div class="col-md-4 my-5"><div class="card"><div class="card-body"><h2>Become a Mentor</h2></div></div></div>
-        </div></div>
-      </div>   
-    </div>
-  </section>
-  <section id="health-education">
-    <div class="col-sm-12 text-center"><h1>Health Education</h1></div>
-    <div class="container my-5 text-center"><div class="row gx-2">
-      <div class="col-md-4 my-5"><div class="card"><div class="card-body "><h2>Career Development</h2></div></div></div>
-      <div class="col-md-4 my-5"><div class="card"><div class="card-body"><h2>Student Ambassador Program</h2></div></div></div>
-      <div class="col-md-4 my-5"><div class="card"><div class="card-body"><h2>Become a Mentor</h2></div></div></div>
-    </div></div>
-  </section>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<section id="mentorship">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 text-center mb-5">
+        <h1>Mentorship</h1>
+      </div>
+      <div class="col-md-6 my-auto text-center">
+        <div class="d-flex justify-content-center">
+          <div class="w-75">
+            <h2 class="mb-5">Get Expert Advice</h2>
+            <p>Get expert advice of others who have made it in the field of medicine.
+              Enjoy career enlightment as you embark on your medical journery.
+              Network with a team of like minded peers.
+              have access to mentorship sessions that help you progress in your medical journey!
+            </p>
+          </div>
 
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex justify-content-center">
+          <img class="border card-rounded border border-secondary-subtle shadow w-75"
+            src="{%static 'blog/mentorship-photo.jpg'%}">
+        </div>
+      </div>
+
+
+      <div class="container my-5 text-center">
+        <div class="row">
+
+          <div class="col-md-4 my-5">
+            <div class="d-flex justify-content-center">
+              <div class="card w-75 card-rounded shadow border border-secondary-subtle official-color white">
+                <img src="{% static 'blog/001-surgeon.png' %}" alt="" class="card-img-top card-image mx-auto rounded">
+                <div class="card-body">
+                  <h4 class="card-title">Career Development</h4>
+                  <p class="card-text">Learn how to develop your career. Interact with others in the field and learn
+                    from them. Fostering connections and sharing information </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-5">
+            <div class="d-flex justify-content-center">
+              <div class="card w-75 shadow card-rounded border-secondary-subtle official-color white">
+                <img src="{% static 'blog/005-ambassador.png' %}" alt=""
+                  class="card-img-top card-image mx-auto rounded">
+                <div class="card-body">
+                  <h4 class="card-title">Student Ambassador Program</h4>
+                  <p class="card-text">Make a meaningful impact by sharing your passion and connecting with like minded
+                    peers and doctors</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-5">
+            <div class="d-flex justify-content-center">
+              <div class="card w-75 shadow card-rounded border-secondary-subtle official-color white">
+                <img src="{% static 'blog/006-education.png' %}" alt="" class="card-img-top card-image mx-auto rounded">
+                <div class="card-body">
+                  <h4 class="card-title">Become a Mentor</h4>
+                  <p class="card-text">Shape the future. Guide aspiring minds and make a lasting impact on the next
+                    generation. Join us in building brighter futures together</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="health-education" class="p-3 gradient" >
+  <div class="col-sm-12 text-center">
+    <h1>Health Education</h1>
+  </div>
+  <div class="container my-5 text-center">
+    <div class="row">
+      <div class="col-md-4 my-5">
+        <div class="d-flex justify-content-center">
+          <div class="card w-75 card-rounded shadow border border-secondary-subtle">
+            <img src="{% static 'blog/mentalhealth.jpg' %}" alt="" class="card-img-top card-image mx-auto rounded object-fit-cover">
+            <div class="card-body">
+              <h4 class="card-title">Mental Health</h4>
+              <p class="card-text">Learn about Mental health and how you can manage it you can face your challenges </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-5">
+        <div class="d-flex justify-content-center">
+          <div class="card w-75 shadow card-rounded border-secondary-subtle">
+            <img src="{% static 'blog/hypertension.jpg' %}" alt=""
+              class="card-img-top card-image mx-auto rounded object-fit-cover">
+            <div class="card-body">
+              <h4 class="card-title">Hypertenstion</h4>
+              <p class="card-text">Learn about the dangers of Hypertension and how you can prevent it. For prevention is better than cure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-5">
+        <div class="d-flex justify-content-center">
+          <div class="card w-75 shadow card-rounded border-secondary-subtle">
+            <img src="{% static 'blog/breastcancer.jpeg' %}" alt="" class="card-img-top card-image mx-auto rounded object-fit-cover">
+            <div class="card-body">
+              <h4 class="card-title">Breast Cancer</h4>
+              <p class="card-text">Join the exhilarating conversation that will be had on breast cancer from presentation all the way to treatment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end"><a class="btn btn-primary official-color" href="#">See more</a></div>
+    </div>
+  </div>
+</section>
 {% endblock %}
