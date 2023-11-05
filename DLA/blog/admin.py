@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import mentorshipArticle
-@admin.register(mentorshipArticle)
-class mentorshipArticleAdmin(admin.ModelAdmin):
-    pass
+from .models import Article, Category, Tags
+admin.site.register(Article)
+admin.site.register(Category)
+admin.site.register(Tags)
