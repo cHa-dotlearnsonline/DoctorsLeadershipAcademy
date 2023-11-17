@@ -1,1 +1,23 @@
-<!--This page will render what the user has clicked on to read that's all-->
+{% extends "blog/layout.html" %}
+{% load static %}
+{% block media %} {{quill2.media}} {% endblock %}
+{% block title %} {{ article.title }} {% endblock%} 
+{% block body %}
+<div id="carouselExample" class="carousel slide ">
+    <div class="carousel-inner">
+      <div class="carousel-item active max-height-carousel">
+        <img src="{% static 'blog/new_try_photo2.png' %}" class="d-block w-100"
+          alt="members of doctors leadership academy">   
+    </div>
+  </div>
+<div class="container">
+	<div class="mx-auto">
+		<div class="ql-editor">
+			{{ article.content.html|safe}}	
+		</div>	
+	</div>
+	
+</div>	
+
+
+{% endblock %}

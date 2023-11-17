@@ -1,11 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>category</title>
-</head>
-<body>
-    <!--This page will serve as the place to view all the articles under each category-->
-</body>
-</html>
+{% extends "blog/layout.html" %}
+{% load static %}
+{% block body %}
+<div id="carouselExample" class="carousel slide ">
+    <div class="carousel-inner">
+      <div class="carousel-item active max-height-carousel">
+        <img src="{% static 'blog/new_try_photo2.png' %}" class="d-block w-100"
+          alt="members of doctors leadership academy">   
+    </div>
+  </div>
+<div class="container mt-5">
+    
+		<div class="row mt-5 mb-5 d-flex justify-content-center">
+            
+
+                {% if categories %}
+                        {% for article in categories %}
+                        <h3 class="col-12"><a href="{% url 'category' article.0 %}"></a>{{article.0}}</a></h3>
+                            {% for artie in article.1 %}
+                                <div class="col-md-4 border border-1 m-1">
+                                    
+                                        <a href="{% url 'read' artie.id %}">
+                                            <p> {{artie.cover}}</p>
+                                            <img src={{artie.cover.url}} alt="" class="w-100">
+                                            <h2> {{artie.title}} </h2>
+                                            <p>Created: {{artie.created}}</p>
+                                            <p><strong>updated</strong>: {{artie.updated}}</p>
+                                            </a>
+                                    
+                   
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                   
+                {% endif %}
+
+                {% if category %}
+                    <h3>{{category}}</h3>
+                    {% for article in articles %}
+                        <div class="col-md-4 border border-1">
+                            <a href="{% url 'read' article.id %}">
+                                <p>{{article.cover}}</p>
+                                <img src="{{article.cover}}" alt="" class="w-100">
+                                <h2> {{article.title}} </h2>
+                                <p>Created: {{article.created}}</p>
+                                <p><strong>updated</strong>: {{article.updated}}</p>
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                {% if error %}
+                    <h1>{{error}}</h1>
+                {% endif %}
+                
+
+            
+        </div>	
+	
+	
+</div>	
+
+
+{% endblock %}
