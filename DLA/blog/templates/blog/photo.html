@@ -6,7 +6,7 @@
     <div class="row">
         {% for photo in photos %}
         <div class="col-md-4">
-            <img src="{% photo.photo.url %}" alt="" class="w-100">
+            <img src="{{ photo.photo.url }}" alt="" class="w-100">
         </div>
         {% endfor %}
     </div>

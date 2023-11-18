@@ -34,7 +34,7 @@ class Photo(models.Model):
     """This is meant to be a store for photos for the organisation to upload"""
     caption = models.CharField(max_length=500, blank=True)
     photo = models.ImageField(upload_to="dla_pictures")
-    tag = models.ForeignKey(blank=True, on_delete=models.DO_NOTHING)
+    tag = models.ForeignKey("Photo_tag", blank=True, on_delete=models.DO_NOTHING)
     date_uploaded = models.DateTimeField(auto_now_add=True)
     date_changed = models.DateTimeField(auto_now=True)
 
