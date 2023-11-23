@@ -1,18 +1,43 @@
 {% extends "blog/layout.html" %}
 {% load static %}
-{% block title %} Gallery {% endblock%} 
+{% block title %} Gallery {% endblock %}
+
 {% block body %}
-<div class="container">
-    <div class="row">
-        {% for photo in photos %}
-        <div class="col-md-4">
-            <img src="{{ photo.photo.url }}" alt="" class="w-100">
-        </div>
-        {% endfor %}
+<div >
+    <div class="container massive-margin">
+        <div id="first" class="row"></div>
     </div>
-
 </div>
+<div id="second" class="container massive-margin">
+    <div class="row">
+        <!--Create 3 columns-->
+        <div  class="col-md-4">
+            <div class="container">
+                <div id="column1" class="row">
+                    <div></div>
+                </div>
+            </div>
 
+        </div>
+        <div  class="col-md-4">
+            <div class="container">
+                <div id="column2" class="row">
+                    
+                    <div></div>
+                </div>
+            </div>
 
+        </div>
+        <div  class="col-md-4">
+            <div class="container">
+                <div id="column3" class="row">
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="{% static 'javascript/photo.js' %}"></script>
 
 {% endblock %}

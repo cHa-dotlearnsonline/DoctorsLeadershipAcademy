@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  .wrapper {
+    flex: 1;
+  }
+  .footer {
+    flex-shrink: 0;
+  }
+  .massive-margin {
+    margin-top: 200px;
+  }
+   /* .official-color {
+    background-color: rgba(26, 132, 132 0.8) !important;
+   } */
+   .center-caption {
+display: flex;
+flex-direction: column;
+justify-content: center;
+/* align-items: left; */
+height: 100%;
+text-align: left;
+color: #fff;
+}
+
+.max-height-carousel img {
+max-height: 100vh;
+/* Set the maximum height to the viewport height */
+object-fit: cover;
+/* border-radius:0 0 5% 5%; */
+margin-bottom: 5em;
+}
+
+.image-filler img {
+max-height: auto;
+object-fit: cover;
+}
+
+p {
+line-height: 2.1em;
+}
+
+.card-rounded {
+border-radius: 2rem;
+}
+
+.card-image {
+height: 130px;
+width: 130px;
+}
+.btn {
+  background-color: rgb(0, 145, 145);
+  border-color: rgb(0, 79, 79);
+  border-radius: 0;
+  
+}
+.btn:hover {
+background-color: rgb(0, 59, 59);
+border-color: rgb(0, 79, 79);
+color: rgb(255, 255, 255);
+}
+.btn-primary {
+ border:none;
+}
+.gradient {
+background: linear-gradient(to bottom,rgb(247, 255, 255), rgb(26, 132, 132),rgb(100, 189, 189));
+}
+.logo {
+height: 75px;
+width: 75px;
+background-color: rgb(255, 255, 255);
+border-radius: 100%;
+}
+
+.custom-nav {
+    border-bottom: 1px solid #d8d2ee; 
+    transition: background 0.5s ease;
+    backdrop-filter: blur(3px);
+    border-width: 1px;
+    background: rgba(0, 30, 30, 0.8);
+}
+
+
+.nav-scroll {
+  backdrop-filter: blur(3px);
+  border-bottom: 1px solid rgb(26, 132, 132);
+  background: rgba(26, 132, 132, 0.9);
+}
+
+nav {
+  border-bottom: 1px solid rgb(26, 132, 132);
+}
+
+/* how to make the underline on hover */
+a.nav-font {
+  font-weight: 900;
+  font-size: medium;
+  color: rgb(0, 145, 145);
+  position: relative;
+}
+a.nav-font::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:rgb(0, 69, 69);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.changer {
+  color:white !important;
+}
+a.nav-font:hover::before {
+  visibility: visible;
+  width: 100%;
+  
+}
+.nav-link:hover {
+  color: rgb(0, 145, 145);
+}
+@media (max-width: 768px){
+  a.nav-font:hover::before {
+    visibility: visible;
+    width: 20%;
+  }
+}
+.text-primary-emphasis {
+  color: rgb(26, 132, 132) !important;
+}
+.carousel-caption {
+  animation: 3s ease-in 1s infinite reverse both running slidein;
+}
+
+a.fs-1 {
+  text-decoration: none;
+}
+
+.card-display {
+  height: 20vw; 
+  object-fit: cover;
+}

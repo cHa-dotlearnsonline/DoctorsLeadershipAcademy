@@ -37,4 +37,14 @@ class Photo(models.Model):
     tag = models.ForeignKey("Photo_tag", blank=True, on_delete=models.DO_NOTHING)
     date_uploaded = models.DateTimeField(auto_now_add=True)
     date_changed = models.DateTimeField(auto_now=True)
+    
+    def serialize(self):
+        return {
+            "id": self.id,
+            "caption": self.caption,
+            "photo": self.photo.url,
+            "tag": self.tag.tag,
+            "date-uploaded": self.date_uploaded.strftime("%d/%m/%Y"),
+            "date-changed": self.date_changed.strftime("%d/%m/%Y, %H:%M:%S")
+        }
 

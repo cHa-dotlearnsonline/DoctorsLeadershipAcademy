@@ -1,50 +1,38 @@
 {% extends "blog/layout.html" %}
 {% load static %}
 {% block body %}
-<div id="carouselExample" class="carousel slide ">
-    <div class="carousel-inner">
-      <div class="carousel-item active max-height-carousel">
-        <img src="{% static 'blog/new_try_photo2.png' %}" class="d-block w-100"
-          alt="members of doctors leadership academy">   
-    </div>
-  </div>
-<div class="container mt-5">
-    
-		<div class="row mt-5 mb-5 d-flex justify-content-center">
-            
 
+<div class="container massive-margin text-center">
+		<div class="row mt-5 mb-5">
                 {% if categories %}
                         {% for article in categories %}
-                        <h3 class="col-12"><a href="{% url 'category' article.0 %}"></a>{{article.0}}</a></h3>
+                        <h3 class="col-12 "><a class="fs-1 fw-bolder text-primary-emphasis nav-font" href="{% url 'category' article.0 %}">{{article.0}}</a></h3>
                             {% for artie in article.1 %}
-                                <div class="col-md-4 border border-1 m-1">
-                                    
-                                        <a href="{% url 'read' artie.id %}">
-                                            <p> {{artie.cover}}</p>
-                                            <img src={{artie.cover.url}} alt="" class="w-100">
-                                            <h2> {{artie.title}} </h2>
-                                            <p>Created: {{artie.created}}</p>
-                                            <p><strong>updated</strong>: {{artie.updated}}</p>
-                                            </a>
-                                    
-                   
+                                <div class="col-md-4 text-start">
+                                    <div  class="card m-3 rounded shadow bg-body-tertiary">
+                                        <img class="card-img-top card-display" src={{artie.cover.url}} alt="" class="w-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"> {{artie.title}} </h5>
+                                            <p class="card-text"><small class="text-body-secondary">Created: {{artie.created}}</small></p>
+                                            <a href="{% url 'read' artie.id %}"> read more...</a>
+                                        </div>
+                                    </div>
+                                        
                                 </div>
                             {% endfor %}
                         {% endfor %}
-                   
                 {% endif %}
-
                 {% if category %}
-                    <h3>{{category}}</h3>
+                    <h3 class="fs-1 nav-font fw-bolder text-primary-emphasis">{{category}}</h3>
                     {% for article in articles %}
-                        <div class="col-md-4 border border-1">
-                            <a href="{% url 'read' article.id %}">
-                                <p>{{article.cover}}</p>
-                                <img src="{{article.cover}}" alt="" class="w-100">
-                                <h2> {{article.title}} </h2>
-                                <p>Created: {{article.created}}</p>
-                                <p><strong>updated</strong>: {{article.updated}}</p>
-                            </a>
+                        <div class="col-md-4 text-start">
+                            <div class="card m-3 rounded shadow bg-body-tertiary">
+                                    <img class="card-img-top card-display" src="{{article.cover.url}}" alt="" class="w-100">
+                                    <h5 class="card-title"> {{article.title}} </h5>
+                                    <p> <small class="card-text">{{article.created}}</small></p>
+                                <a href="{% url 'read' article.id %}">read more... </a>
+                            </div>
+
                         </div>
                     {% endfor %}
                 {% endif %}
@@ -52,12 +40,7 @@
                 {% if error %}
                     <h1>{{error}}</h1>
                 {% endif %}
-                
-
-            
-        </div>	
-	
-	
+        </div>		
 </div>	
 
 

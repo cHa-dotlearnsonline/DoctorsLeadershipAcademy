@@ -3,16 +3,16 @@
 {% block title %} Doctors Leadership Index {% endblock %}
 {% block body %}
 <!-- TODO: complete the landing Page -->
-<div id="carouselExample" class="carousel slide">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active max-height-carousel ">
+    <div class="carousel-item active max-height-carousel" >
       <img src="{% static 'blog/new_try_photo2.png' %}" class="d-block w-100 h-50"
         alt="members of doctors leadership academy">
       <div class="container">
         <div class="carousel-caption center-caption">
-          <h1>Doctor's Leadership Academy</h1>
-          <p class="opacity-100 fw-medium">Helping Young Doctors Navigate their Careers and Helping Society Understand health.</p>
-          <p><a class="btn btn-lg btn-primary official-color" target="_blank" href="https://lnkd.in/gmTNPkXB">Join Us</a></p>
+          <h1 class="fs-1 fw-bolder">Doctor's Leadership Academy</h1>
+          <p class="opacity-100 fw-medium fw-lighter fst-italic">Helping Young Doctors Navigate their Careers and Helping Society Understand health.</p>
+          <p><a class="btn btn-lg btn-primary fw-semibold shadow" target="_blank" href="#">Join Us</a></p>
         </div>
       </div>
     </div>
@@ -21,9 +21,9 @@
         alt="members of doctors leadership academy">
       <div class="container">
         <div class="carousel-caption center-caption">
-          <h1>Mentorhsip At It's Best</h1>
-          <p class="opacity-100 fw-medium">Have access to a great array of Mentors to help you grow in your career</p>
-          <p><a class="btn btn-lg btn-primary official-color" href="#">Become An Ambassador</a></p>
+          <h1 class="fs-1 fw-bolder">Mentorhsip At It's Best</h1>
+          <p class="opacity-100 fw-medium fw-lighter fst-italic">Have access to a great array of Mentors to help you grow in your career</p>
+          <p><a class="btn btn-lg btn-primary fw-semibold shadow" href="#">Become An Ambassador</a></p>
         </div>
       </div>
     </div>
@@ -40,20 +40,20 @@
 <section id="mentorship">
   <div class="container-fluid">
     <div class="row mx-5">
-      <div class="col-sm-12 text-center mb-5">
-        <h1>Mentorship</h1>
+      <div class="col-sm-12 text-center mb-2 mb-md-5">
+        <h1 class="fs-1 fw-bolder text-primary-emphasis">Mentorship</h1>
       </div>
       <div class="col-md-6">
         
           <img class="border border-secondary-subtle shadow w-100"
             src="{%static 'blog/mentorship-photo.jpg'%}">
        
-          <p class="my-4"><a class="btn btn-lg btn-primary official-color shadow" href="#">Become An Ambassador</a></p>
+          <p class="my-4"><a class="btn btn-lg btn-primary fw-semibold shadow" href="#">Become An Ambassador</a></p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 text-center">
         <div class="ms-2 my-5">
-          <h2 class="">Get Expert Advice</h2>
-          <p>Get expert advice of others who have made it in the field of medicine.
+          <h2 class="fs-3 fw-semibold m-md-5">Get Expert Advice</h2>
+          <p class="fst-italic fs-4 m-md-5">Get expert advice of others who have made it in the field of medicine.
             Enjoy career enlightment as you embark on your medical journery.
             Network with a team of like minded peers.
             have access to mentorship sessions that help you progress in your medical journey!
@@ -66,14 +66,12 @@
 </section>
 <section id="what-we-do">
   <div class="text-center">
-    <h1>Our Work</h1>
+    <h1 class="fs-1 fw-bolder text-primary-emphasis">Our Work</h1>
     <div class="w-50 mx-auto">
-      <p>
-        <b>
+      <p class="fs-5 m-md-5 fst-italic">
           We stand for the use of various means to equip
         others with everything they need in order to contribute 
         meaningfully to the development of their communities.
-        </b>
       </p> 
     </div>
    
@@ -87,7 +85,7 @@
               <h4 class="card-title">Career Development</h4>
               <p class="card-text w-50">Learn how to develop your career. Interact with others in the field and learn
                 from them. Fostering connections and sharing information </p>
-              <a href="#"><strong>READ MORE…</strong></a>
+              <a  href="#"><strong>READ MORE…</strong></a>
             </div>
           </div> 
         </div>
@@ -130,31 +128,10 @@
       </div>
 </section>
 <style>
-  #health-education {
-  background-image: url("{% static 'blog/new_try_photo2.png' %}");
-  background-attachment: fixed; 
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
-  .my_new {
-  background-image: url("{% static 'blog/new_try_photo3.png' %}");
-  /* background-attachment: fixed;  */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  }
-  .just_image {
-    background-image: url('{% static "blog\new_try_photo3.png" %}');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 </style>
-<section id="health-education" class="p-3 gradient" >
+<section id="health-education" class="p-3 gradient">
   <div class="col-sm-12 text-center">
-    <h1 style="color: white;">Health Education</h1>
+    <h1 class="fs-1 fw-bolder text-primary-emphasis" >Health Education</h1>
   </div>
   <div class="container my-5 text-center">
     <div class="row">
@@ -192,37 +169,37 @@
           </div>
         </div>
       </div>
-      <div class="d-flex justify-content-end"><a class="btn btn-primary official-color" href="#">See more</a></div>
+      <div class="d-flex justify-content-end"><a class="btn btn-primary fw-semibold" href="#">See more</a></div>
     </div>
   </div>
 </section>
 <section id="news" class="my-5 p-5">
   <div class="text-center">
-    <h1>News</h1>
+    <h1 class="fs-1 fw-bolder text-primary-emphasis">News</h1>
     <div class="w-50 mx-auto">
-      <p>
-        <b>
+      <p class="fs-5 m-md-5 fst-italic">
+        
           We stand for the use of various means to equip
         others with everything they need in order to contribute 
         meaningfully to the development of their communities.
-        </b>
+        
       </p> 
     </div>
   </div>
   <div class="container-fluid" >
     <div class="row">
-      <div class="col-md-6 my_new mb-md-0 mb-2 w-md-50 p-2" >
+      <div class="col-md-6 my_new mt-md-3 mb-md-3 mb-3 w-md-50 p-2" >
         <h5 class="card-title" style="color: white;">Card title</h5>
             <p class="card-text" style="color: white;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <p class="card-text" style="color: white;"><small>Last updated 3 mins ago</small></p>
       </div>
-      <div class="col-md-6 ">
-        <div class="container mb-1">
+      <div class="col-md-6 p-0 p-md-2">
+        <div class="container p-1 p-md-2">
           <div class="row">
             <div class="col-4 mx-0 my_new p-0" >
             <!-- <img src="{% static 'blog/new_try_photo3.png' %}" class="w-100"> -->
             </div>
-            <div class="col-8 official-color w-md-50 p-1" >
+            <div class="col-8 bg-secondary-subtle w-md-50 p-md-2" >
               <div class="card-body">
                 <h4 class="card-title">Mentor</h4>
                 <p class="card-text">Shape the future. Guide aspiring minds and make a lasting impact on the next
@@ -231,12 +208,12 @@
             </div>
           </div>
         </div>
-        <div class="container">
+        <div class="container p-1 p-md-2 pt-md-0">
           <div class="row">
             <div class="col-4 mx-0 just_image p-0">
             <!-- <img src="{% static 'blog/new_try_photo3.png' %}" class="w-100"> -->
             </div>
-            <div class="col-8 official-color w-md-50 p-1">
+            <div class="col-8 bg-secondary-subtle w-md-50 p-md-2">
               <div class="card-body">
                 <h4 class="card-title">Mentee</h4>
                 <p class="card-text">Shape the future. Guide aspiring minds and make a lasting impact on the next

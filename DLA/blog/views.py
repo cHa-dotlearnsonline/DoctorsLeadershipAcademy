@@ -1,4 +1,6 @@
 from django.shortcuts import render
+import json
+from django.http import JsonResponse
 from django.http import HttpResponse
 from .models import Category, Tags, Article, Photo, Photo_tag
 # Create your views here.
@@ -21,7 +23,6 @@ def category(request, category):
             my_categories.append(new_cate)
             listed_categories.append(cate)
         return render(request, 'blog/category.html', {"categories": my_categories, "listed": listed_categories})
-        # return HttpResponse("This is working just fine")
     elif str(category) != 'category':
         #get the name of the category that has been passed and then just render that specific category
         try:
@@ -44,5 +45,13 @@ def read(request, id):
 
 def gallery(request):
     # will display the photos
-    all_photos = Photo.objects.all()
-    return render(request, 'blog/photo.html', {"photos": all_photos}) 
+    if request.method == "POST":
+        data = json.loads(request.body)
+        if data.get("photos") == "all":
+            all_photos = Photo.objects.all()
+            all_photos = all_photos.order_by("-date_uploaded")
+            photos = [photo.serialize() for photo in all_photos]
+
+            return JsonResponse(photos, safe=False)
+    else:
+        return render(request, 'blog/photo.html')
