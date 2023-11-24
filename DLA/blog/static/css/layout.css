@@ -144,3 +144,16 @@ a.fs-1 {
   height: 20vw; 
   object-fit: cover;
 }
+.object-fit-cover {
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+ .object-fit-cover {
+  height:30vw;
+ }
+}
+@media screen and (max-width: 768px) {
+  .object-fit-cover {
+   height:50vw;
+  }
+ }

@@ -31,34 +31,36 @@ function get_photos() {
     .then(response => response.json())
     .then(photos => {
         console.log(photos)  
-        let shown_pictures = []
         for (let i=0; i < photos.length; i++){
             let picture = photos[i]["photo"]
             let card = `
-                <div class="col-md-12 mb-5">
+                <div class="col-md-12 mb-1">
                 <img src=${picture} class = "w-100"> 
                 </div>
                 `
             first_container.insertAdjacentHTML('beforeend', card)
         }
-        for (let i=0; i < photos.length; i = i + 2){
-            let k = 0
-            for (let j = 0; j < 4; j++ ) {
-                let column = document.querySelector(`#column${k+1}`)
-                if ( (i+j) < photos.length){
-                    let picture = photos[i+j]["photo"]
-                    let card = `
-                    <div class="col-12 mb-5">
-                    <img src=${picture} class = "w-100"> 
-                    </div>
-                    `
-                    if (!shown_pictures.includes(picture) && ((k+1)!== 4)){
-                        column.insertAdjacentHTML('beforeend', card)
-                        shown_pictures.push(picture)
-                        k = k + 1
-                    }
 
-                }
+        // new material that will hopefully work
+        let to_distribute = []
+        let current_start = 0
+        for (let i= 0; i < photos.length; i=i+3){
+            my_array = photos.slice(current_start, current_start+3)
+            console.log(my_array)
+            to_distribute.push(my_array)
+            current_start=current_start+3
+        }
+        for (let i=0; i < to_distribute.length; i++){
+            let current_arrary  = to_distribute[i]
+            for (let j = 0; j < current_arrary.length; j++ ) {
+                let column = document.querySelector(`#column${j+1}`)
+                let picture = current_arrary[j]["photo"]
+                let card = `
+                <div class="col-12 mb-1">
+                <img src=${picture} class = "w-100"> 
+                </div>
+                `
+                column.insertAdjacentHTML('beforeend', card)
                 
             }
             
