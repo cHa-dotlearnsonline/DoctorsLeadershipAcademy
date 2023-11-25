@@ -3,27 +3,14 @@
 <html lang="en">
 <head>
   <style>
-    #health-education {
+  #health-education {
   background-image: url("{% static 'blog/new_try_photo2.png' %}");
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   }
-  .my_new {
-  background-image: url("{% static 'blog/new_try_photo3.png' %}");
-  /* background-attachment: fixed;  */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  }
-  .just_image {
-    background-image: url('{% static "blog\new_try_photo3.png" %}');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   </style>
  
     <meta charset="UTF-8">
@@ -62,10 +49,10 @@
     </div>
   </nav>
   <div class="wrapper">
-    {% block body %}
-    <form action="#nowheretogo">
+  <form action="#nowheretogo">
       {% csrf_token %}
   </form>
+    {% block body %}
     <h1>The App is now running</h1>
     {% endblock %}
   </div>
@@ -90,6 +77,6 @@
   </div>
 </section>
 <script src="{% static 'javascript/layout.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

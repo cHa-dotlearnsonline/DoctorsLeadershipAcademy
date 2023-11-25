@@ -100,6 +100,7 @@ a.nav-font {
   font-size: medium;
   color: rgb(0, 145, 145);
   position: relative;
+  text-decoration: none;
 }
 a.nav-font::before {
   content: "";
@@ -151,9 +152,26 @@ a.fs-1 {
  .object-fit-cover {
   height:30vw;
  }
+.healthy-height {
+  height:10vw;
 }
-@media screen and (max-width: 768px) {
-  .object-fit-cover {
-   height:50vw;
+.reading-img {
+  height: 40vw;
+  width: 60vw;
+  margin-bottom: 3rem;
+  object-fit: cover;
+}
+}
+@media screen and (max-width: 768px){
+  .reading-img {
+    height: 80vw;
+    width: 80vw;
+    margin-bottom: 3rem;
+    object-fit: cover;
   }
- }
+}
+.just_image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

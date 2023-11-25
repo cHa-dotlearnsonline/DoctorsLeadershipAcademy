@@ -5,9 +5,9 @@
 {% block body %}
 <div class="container massive-margin">
 	<div class="row">
-		<div class="mx-auto justify-content-center">
+		<div class="d-flex justify-content-center">
 			<div class="ql-editor text-start">
-				<img style="object-fit: cover; height: 25vw; width: 50vw;" class="card-image"  src="{{ article.cover.url }}" >
+				<img class="reading-img" src="{{ article.cover.url }}" >
 				{{ article.content.html|safe}}	
 			</div>	
 		</div>

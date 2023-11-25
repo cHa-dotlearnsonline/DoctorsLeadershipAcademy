@@ -17,14 +17,22 @@ class Tags(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length = 200, blank=True)
     content = QuillField()
+    caption = models.CharField(max_length=500, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    cover = models.ImageField(upload_to="images", blank=True)
+    cover = models.ImageField(upload_to="articleImages", blank=True)
     categories = models.ManyToManyField('Category', related_name="articles")
     tags = models.ManyToManyField('Tags', related_name="articles")
 
     def __str__(self):
         return self.title
+    def serialize(self):
+        return {
+            "id": self.id,
+            "caption": self.caption,
+            "title": self.title,
+            "photo": self.cover.url  
+        }
 class Photo_tag(models.Model):
     tag = models.CharField(max_length=255)
     def __str__(self):
